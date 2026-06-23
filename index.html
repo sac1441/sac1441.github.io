@@ -645,13 +645,13 @@ footer{padding:32px 48px;border-top:1px solid var(--g2);display:flex;justify-con
 
 <!-- CONTACT -->
 <section id="contact" style="border-top:1px solid var(--g2);text-align:center;position:relative;overflow:hidden">
-  <!-- Very faint background photo -->
+  <!-- Very faint background photo, now full-bleed so both edges fade evenly -->
   <img src="11250270_-_Sachith_K_P.jpg"
        alt=""
-       style="position:absolute;right:0;top:0;height:100%;width:60%;object-fit:cover;object-position:center top;opacity:0.18;filter:grayscale(100%);pointer-events:none;z-index:0">
-  <!-- Fade overlays so photo blends into black -->
-  <div style="position:absolute;inset:0;background:linear-gradient(to right,#000 20%,transparent 60%,#000 100%);z-index:1;pointer-events:none"></div>
-  <div style="position:absolute;inset:0;background:linear-gradient(to top,#000 0%,transparent 40%);z-index:1;pointer-events:none"></div>
+       style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;opacity:0.22;filter:grayscale(100%);pointer-events:none;z-index:0">
+  <!-- Symmetric vignette: both left and right edges now fade the same way, no hard seam -->
+  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.55) 28%,rgba(0,0,0,0.25) 55%,rgba(0,0,0,0.55) 78%,rgba(0,0,0,0.95) 100%);z-index:1;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,#000 0%,transparent 45%);z-index:1;pointer-events:none"></div>
 
   <!-- Content -->
   <div style="position:relative;z-index:2">
